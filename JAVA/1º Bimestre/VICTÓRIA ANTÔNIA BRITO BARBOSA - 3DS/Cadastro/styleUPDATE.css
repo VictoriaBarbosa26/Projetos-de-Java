@@ -1,0 +1,82 @@
+/* IMPORTANDO FONTES EXTERNAS */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap'); /* Importa fonte */
+
+
+
+
+/*CORPO DA PÁGINA*/
+body {
+	font-family: 'Teko', sans-serif; /* define a fonte principal como teko e uma fonte de fallback como sans-serif */
+	font-size: 30px; /* define o tamanho da fonte como 30 pixels */
+	margin: 0; /* remove as margens externas */
+	padding: 0; /* remove o preenchimento */
+	background: linear-gradient(to bottom right, #8fb9e3, #000000);  /* cria um fundo gradiente que vai do canto superior esquerdo para o canto inferior direito */
+	background-size: 400% 400%;  /* define o tamanho do gradiente */
+	animation: gradientanimation 20s linear infinite;  /* aplica uma animação de gradiente */
+	display: flex; /* faz com que os elementos dentro do body sejam exibidos como um flex container */
+	justify-content: center; /* centraliza os elementos horizontalmente */
+	align-items: center; /* centraliza os elementos verticalmente */
+	height: 100vh; /* define a altura do body como 100% da altura da viewport */
+	perspective: 100px; /* define a perspectiva do elemento pai para animações 3d */
+	background-size: cover; /* ajusta o tamanho da imagem de fundo para cobrir completamente o elemento */
+	background-position: center; /* centraliza a imagem de fundo horizontalmente */
+	background-repeat: no-repeat; /* impede a repetição da imagem de fundo */
+	background-attachment: fixed; /* fixa a imagem de fundo para que ela não role com o conteúdo */
+	color: white; /* define a cor do texto como branco */
+}
+
+
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;  /* define a posição inicial do gradiente */
+  }
+  100% {
+    background-position: 100% 100%;  /* define a posição final do gradiente */
+  }
+}
+
+
+
+
+/*ESTILIZAÇÃO DO CONTAINER*/
+.container {
+	background-color: rgba(53, 113, 122, 0.85);  /* define a cor de fundo com transparência */
+	padding: 20px; /* adiciona um preenchimento interno de 20 pixels */
+	border-radius: 10px; /* adiciona cantos arredondados */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* adiciona uma sombra ao redor do container */
+	max-width: 600px; /* define a largura máxima do container como 600 pixels */
+	width: 100%; /* define a largura do container como 100% */
+	text-align: center; /* centraliza o texto dentro do container */
+	transform-style: preserve-3d; /* define que os filhos do container mantenham sua transformação 3d */
+	transition: transform 0.5s; /* adiciona uma transição suave para a transformação */
+	text-transform: uppercase; /* converte todo o texto para maiúsculas */
+	background-color: rgba(53, 113, 122, 0.85); /* define a cor de fundo com transparência */
+	box-shadow: 8px 8px 15px rgba(9, 9, 9, 0.9); /* adiciona uma sombra ao redor do container */
+}
+
+
+
+
+/*ESTILIZAÇÃO DO TEXTO DO LINK*/
+a {
+	text-decoration: none; /* remove a decoração de link */
+	color: white; /* define a cor do link como branco */
+	}
+
+table {
+	margin: 0 auto; /* centraliza a tabela horizontalmente */
+	}
+
+th, td {
+	padding: 15px; /* adiciona um espaçamento maior interno nas células da tabela */
+	}
+
+th {
+	text-align: right; /* alinha os títulos das colunas à direita */
+	}
+
+td {
+	text-align: left; /* alinha o conteúdo das células à esquerda */
+	}

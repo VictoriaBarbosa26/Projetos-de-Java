@@ -1,0 +1,158 @@
+/* DEFINE O CORPO DA PÁGINA */
+body {
+    font-family: Arial, sans-serif; /* define a família de fontes para o corpo da página */
+    margin: 0; /* remove as margens */
+    padding: 0; /* remove o preenchimento */
+    background: linear-gradient(to bottom right, #b88fe3, #000000); /* define um gradiente linear de preto para branco em diagonal como fundo */
+    background-size: 400% 400%; /* define o tamanho do gradiente */
+    animation: gradientAnimation 20s linear infinite; /* aplica uma animação de gradiente */
+}
+
+/* DEFININDO A ANIMAÇÃO DO GRADIENTE */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%; /* define a posição inicial do gradiente */
+    }
+    100% {
+        background-position: 100% 100%; /* define a posição final do gradiente */
+    }
+}
+
+
+
+
+/* ESTILOS PARA O DROPDOWN */
+.dropdown {
+    position: absolute; /* define a posição absoluta */
+    left: 20px; /* alinha o menu ao lado esquerdo da tela */
+    top: 50%; /* centraliza verticalmente */
+    transform: translatey(-50%); /* centraliza verticalmente */
+}
+
+.dropbtn {
+    background-color: #c6a1f7; /* define a cor de fundo do botão */
+    color: white; /* define a cor do texto */
+    padding: 16px; /* adiciona preenchimento */
+    font-size: 16px; /* define o tamanho da fonte */
+    border: none; /* remove a borda */
+    cursor: pointer; /* altera o cursor para indicar que é clicável */
+}
+
+.dropdown-content {
+    display: none; /* oculta o conteúdo por padrão */
+    position: absolute; /* define a posição absoluta */
+    background-color: #f9f9f9; /* define a cor de fundo */
+    min-width: 160px; /* define a largura mínima */
+    z-index: 1; /* define a ordem de empilhamento */
+    overflow: hidden; /* oculta o overflow */
+    transition: max-height 0.3s ease-in-out; /* aplica uma transição suave */
+    max-height: 0; /* define a altura máxima inicialmente como zero */
+}
+
+.dropdown-content a {
+    color: black; /* define a cor do texto */
+    padding: 12px 16px; /* adiciona preenchimento */
+    text-decoration: none; /* remove a decoração de texto */
+    display: block; /* define como bloco */
+}
+
+.dropdown-content a:hover {
+    background-color: #d0b5f5; /* define a cor de fundo ao passar o mouse */
+}
+
+.dropdown.active .dropdown-content {
+    display: block; /* exibe o conteúdo quando o dropdown está ativo */
+    max-height: 200px; /* define a altura máxima */
+}
+
+
+
+
+/* ESTILOS PARA A BARRA DE NAVEGAÇÃO */
+.navbar {
+    background-color: #000000; /* define a cor de fundo */
+    color: #fff; /* define a cor do texto */
+    text-align: center; /* centraliza o texto horizontalmente */
+    padding: 30px 0; /* adiciona preenchimento vertical */
+    position: relative; /* define a posição relativa */
+}
+
+
+
+
+/* FONTES DO SITE */
+.navbar marquee {
+    font-size: 75px; /* define o tamanho da fonte */
+    font-family: 'protest revolution', sans-serif; /* importação da fonte do google */
+}
+
+/* TITULO DOS FILMES */
+.filme-title {
+    font-size: 35px; /* define o tamanho da fonte */
+    margin-top: 0; /* define a margem superior */
+    font-family: "protest riot", sans-serif; /* define a fonte */
+    font-style: normal; /* define o estilo da fonte */
+}
+
+/* SINOPSE DOS FILMES */
+.filme-desc {
+    color: #666; /* define a cor do texto */
+    font-size: 18px; /* define o tamanho da fonte */
+    font-style: normal; /* define o estilo da fonte */
+}
+
+
+
+
+/* ESTILO DO CONTÊINER DOS CARTÕES DE FILMES */
+.filme-container {
+    display: flex; /* define o layout como flexível */
+    flex-wrap: wrap; /* permite que os itens quebrem para a próxima linha */
+    justify-content: space-around; /* alinha os itens ao redor do contêiner com espaços iguais entre eles */
+    gap: 20px; /* define o espaçamento entre os itens */
+    margin-top: 120px; /* define a margem superior */
+}
+
+/* ESTILO DOS CARTÕES DE FILMES */
+.filme-card {
+    width: calc(50% - 200px); /* define a largura */
+    background-color: #fff; /* define a cor de fundo */
+    border-radius: 10px; /* define o raio das bordas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* adiciona uma sombra sutil */
+    overflow: hidden; /* esconde qualquer conteúdo que ultrapasse o limite do elemento */
+    position: relative; /* define a posição relativa */
+    transition: transform 0.3s ease; /* aplica uma transição suave à transformação */
+}
+
+.filme-card:hover {
+    transform: scale(1.05); /* aumenta o tamanho ao passar o mouse */
+}
+
+/* ESTILO PARA A IMAGEM DOS FILMES */
+.filme-img {
+    width: 100%; /* define a largura */
+    height: 400px; /* define a altura */
+    object-fit: cover; /* redimensiona a imagem para preencher o contêiner */
+}
+
+/* ESTILO PARA AS INFORMAÇÕES DOS FILMES */
+.filme-info {
+    padding: 20px; /* adiciona preenchimento */
+    line-height: 1.5; /* define a altura da linha */
+    margin-bottom: 20px; /* define a margem inferior */
+}
+
+
+
+
+/* ESTILO PARA O RODAPÉ */
+footer {
+    margin-top: 20px; /* define a margem superior */
+    background-color: #000000; /* define a cor de fundo */
+    color: #fff; /* define a cor do texto */
+    text-align: center; /* centraliza o texto horizontalmente */
+    padding: 5px; /* adiciona preenchimento */
+    position: relative; /* define a posição relativa */
+    bottom: 0; /* define a posição em relação à parte inferior */
+    width: 100%; /* define a largura */
+}

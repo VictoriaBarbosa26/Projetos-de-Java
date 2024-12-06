@@ -1,0 +1,223 @@
+/* IMPORTANDO FONTES EXTERNAS */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); /* Importa fonte */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap'); /* Importa fonte */
+
+
+
+
+/* ESTILIZAÇÃO DO CORPO DA PÁGINA */
+body {
+	font-family: Arial, sans-serif; /* define a família de fontes para o corpo da página */
+	margin: 0; /* remove as margens */
+	padding: 0; /* remove o preenchimento */
+	background: linear-gradient(to bottom right, #8fb9e3, #000000); /* define um gradiente linear de preto para roxo em diagonal como fundo */
+	background-size: 400% 400%; /* define o tamanho do gradiente */
+	animation: gradientAnimation 20s linear infinite; /* aplica uma animação de gradiente */
+}
+
+/* DEFININDO A ANIMAÇÃO DO GRADIENTE */
+@keyframes gradientAnimation {
+	0% {
+		background-position: 0% 0%; /* define a posição inicial do gradiente */
+	}
+	100% {
+		background-position: 100% 100%; /* define a posição final do gradiente */
+	}
+}
+
+
+
+
+/* ESTILIZAÇÃO DO CONTÊINER PRINCIPAL */
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 80vh; /* define a altura mínima do contêiner principal */
+}
+
+/* ESTILIZAÇÃO DO CONTÊINER DO FORMULÁRIO */
+.form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%; /* define a largura do contêiner do formulário */
+	background-color: rgba(53, 113, 122, 0.85); /* define a cor de fundo com transparência */
+	padding: 18px; /* adiciona preenchimento */
+	border-radius: 12px; /* arredonda as bordas */
+	box-shadow: 8px 8px 15px rgba(9, 9, 9, 0.9); /* adiciona sombra */
+}
+
+/* ESTILIZAÇÃO DAS CÉLULAS DA TABELA NO FORMULÁRIO */
+.form-container th,
+.form-container td {
+	padding: 10px; /* adiciona um espaçamento interno nas células da tabela */
+}
+
+.form-container td input[type="text"],
+.form-container td input[type="password"],
+.form-container td input[type="checkbox"] {
+	width: 300px; /* define a largura dos campos de entrada */
+	margin-bottom: 10px; /* define a margem inferior */
+	text-align: left; /* alinha os campos de entrada ao centro */
+}
+
+.form-container td label {
+	width: 150px; /* define a largura dos rótulos */
+	text-align: right; /* alinha os rótulos à direita */
+	padding-right: 20px; /* adiciona espaço entre o rótulo e a borda */
+}
+
+.button-container {
+	text-align: center; /* centraliza os botões horizontalmente */
+}
+
+
+
+
+/* ESTILIZAÇÃO DA TABELA */
+table {
+	width: 100%; /* define a largura da tabela */
+	border: 1px solid darkgray; /* define a borda da tabela */
+	text-align: center; /* alinha o texto ao centro */
+	margin-bottom: 20px; /* define a margem inferior */
+}
+
+th, td {
+	border: 1px solid darkgray; /* define a borda das células */
+	font-family: 'Lobster', sans-serif; /* define a fonte */
+	color: white; /* define a cor do texto */
+	font-size: 20px; /* define o tamanho da fonte */
+}
+
+
+
+
+/* ESTILIZAÇÃO DOS CAMPOS DE ENTRADA DE TEXTO */
+input[type="text"] {
+	padding: 6px; /* adiciona preenchimento */
+	margin: 3px 0; /* define as margens */
+	border: 1px solid #000; /* define a borda */
+	border-radius: 5px; /* arredonda as bordas */
+	width: calc(100% - 14px); /* define a largura */
+	box-sizing: border-box; /* inclui o preenchimento e a borda no cálculo da largura total */
+	font-family: 'Caveat', cursive; /* define a fonte */
+	font-size: 14px; /* define o tamanho da fonte */
+	color: black; /* define a cor do texto */
+}
+
+
+/* ESTILIZAÇÃO DO BOTÃO */
+input[type="button"] {
+	padding: 8px 16px; /* adiciona preenchimento */
+	margin: 3px; /* define as margens */
+	border: none; /* remove a borda */
+	border-radius: 5px; /* arredonda as bordas */
+	background-color: #012c33; /* define a cor de fundo */
+	color: white; /* define a cor do texto */
+	cursor: pointer; /* define o cursor */
+	font-family: 'Exo 2', sans-serif; /* define a fonte */
+	font-size: 14px; /* define o tamanho da fonte */
+	transition: background-color 0.7s ease; /* adiciona uma transição suave na cor de fundo */
+}
+
+input[type="button"]:hover {
+	background-color: #42adbd; /* altera a cor de fundo ao passar o mouse sobre o botão */
+}
+
+
+
+
+/* ESTILIZAÇÃO DO DROPDOWN */
+.dropdown {
+	position: absolute; /* define a posição absoluta */
+	left: 20px; /* define a distância à esquerda */
+	top: 50%; /* define a distância do topo */
+	transform: translatey(-50%); /* move o dropdown para o centro verticalmente */
+}
+
+.dropbtn {
+	background-color: #42adbd; /* define a cor de fundo */
+	color: white; /* define a cor do texto */
+	padding: 16px; /* adiciona preenchimento */
+	font-size: 16px; /* define o tamanho da fonte */
+	border: none; /* remove a borda */
+	cursor: pointer; /* define o cursor */
+}
+
+.dropdown-content {
+	display: none; /* oculta o conteúdo do dropdown por padrão */
+	position: absolute; /* define a posição absoluta */
+	background-color: #f9f9f9; /* define a cor de fundo */
+	min-width: 160px; /* define a largura mínima */
+	z-index: 1; /* define a ordem z */
+	overflow: hidden; /* oculta o conteúdo que transborda */
+	transition: max-height 0.3s ease-in-out; /* adiciona uma transição suave na altura máxima */
+	max-height: 0; /* define a altura máxima */
+}
+
+.dropdown-content a {
+	color: black; /* define a cor do texto */
+	padding: 12px 16px; /* adiciona preenchimento */
+	text-decoration: none; /* remove a decoração do texto */
+	display: block; /* exibe os elementos em bloco */
+}
+
+.dropdown-content a:hover {
+	background-color: #42adbd; /* altera a cor de fundo ao passar o mouse sobre os itens do dropdown */
+}
+
+.dropdown.active .dropdown-content {
+	display: block; /* exibe o conteúdo do dropdown quando está ativo */
+	max-height: 200px; /* define a altura máxima */
+}
+
+
+
+
+/* ESTILIZAÇÃO DA BARRA DE NAVEGAÇÃO */
+.navbar {
+	background-color: #000000; /* define a cor de fundo */
+	color: #fff; /* define a cor do texto */
+	text-align: center; /* centraliza o texto horizontalmente */
+	padding: 30px 0; /* adiciona preenchimento */
+	position: relative; /* define a posição relativa */
+}
+
+.navbar marquee {
+	font-size: 75px; /* define o tamanho da fonte */
+	font-family: 'Protest Revolution', sans-serif; /* define a fonte */
+}
+
+
+
+
+/* ESTILIZAÇÃO DO AVISO */
+.aviso {
+	background-color: #2d6337; /* cor de fundo para destacar a mensagem */
+	color: #cdf7d5; /* cor do texto da mensagem */
+	padding: 10px; /* adiciona preenchimento interno para espaçamento */
+	border-radius: 5px; /* arredonda as bordas da mensagem */
+	text-align: center; /* centraliza o texto horizontalmente */
+	position: absolute; /* define a posição fixa */
+	top: 250px; /* ajusta a distância do topo da página */
+	left: 50%; /* centraliza horizontalmente */
+	transform: translateX(-50%); /* centraliza horizontalmente */
+	max-width: 60%; /* define uma largura máxima maior para a mensagem */
+}
+
+
+
+
+/* ESTILIZAÇÃO DO RODAPÉ */
+footer {
+	margin-top: 20px; /* define a margem superior */
+	background-color: #000000; /* define a cor de fundo */
+	color: #fff; /* define a cor do texto */
+	text-align: center; /* centraliza o texto horizontalmente */
+	padding: 5px; /* adiciona preenchimento */
+	position: relative; /* define a posição relativa */
+	bottom: 0; /* define a posição em relação à parte inferior */
+	width: 100%; /* define a largura */
+}

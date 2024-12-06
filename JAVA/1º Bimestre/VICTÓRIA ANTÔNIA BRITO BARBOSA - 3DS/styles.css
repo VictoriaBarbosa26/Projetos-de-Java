@@ -1,0 +1,246 @@
+/* IMPORTA FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+
+
+
+/* ESTILOS CSS */
+* {
+    box-sizing: border-box; /* define a modelagem da caixa para incluir preenchimento e bordas no cálculo da largura e altura */
+}
+
+
+
+
+/* DEFINE O CORPO DA PÁGINA */
+body {
+    font-family: Arial, sans-serif; /* define a família de fontes para o corpo da página */
+    margin: 0; /* remove as margens */
+    padding: 0; /* remove o preenchimento */
+    background: linear-gradient(to bottom right, #000000, #93009c); /* define um gradiente linear de preto para branco em diagonal como fundo */
+    background-size: 400% 400%; /* define o tamanho do gradiente */
+    animation: gradientAnimation 20s linear infinite; /* aplica uma animação de gradiente */
+}
+
+
+
+
+/* DEFININDO A ANIMAÇÃO DO GRADIENTE */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%; /* define a posição inicial do gradiente */
+    }
+    100% {
+        background-position: 100% 100%; /* define a posição final do gradiente */
+    }
+}
+
+
+
+
+/* CORPO DA PÁGINA */
+#corpo {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    min-height: 100vh; /* altura mínima da tela */
+    padding-bottom: 20px; /* espaçamento na parte inferior */
+}
+
+
+
+
+/* ITENS DO CARROSSEL */
+.container {
+    max-width: 500px; /* definindo a largura máxima do container */
+    width: 200%; /* garantindo que o container ocupe toda a largura disponível */
+}
+        
+.carousel-wrapper {
+    overflow: hidden; /* esconde os itens fora do container */
+    position: relative; /* adicionado para sobrepor os controles */
+    top: -90px; /* movendo os itens do carrossel para cima */
+}
+      
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease; /* adiciona uma transição suave ao trocar os slides */
+    width: 100%;
+}
+   
+.carousel-item {
+    flex: 0 0 auto; /* mantém o tamanho original dos itens */
+    max-width: 100%; /* garante que os itens se ajustem ao tamanho do container */
+    position: relative; /* permite posicionar os elementos filhos */
+    width: 100%; /* garante que as imagens ocupem toda a largura do container */
+    height: 500px; /* defina a altura desejada para as imagens */
+    object-fit: cover; /* garante que a imagem cubra todo o espaço alocado */
+}
+        
+/* IMAGENS DO CARROSSEL */    
+img {
+    width: 100%; /* garante que as imagens ocupem toda a largura do container */
+    height: 500px; /* mantém a proporção da imagem */
+    object-fit: cover; /* garante que a imagem cubra todo o espaço alocado */
+}
+
+/* TEXTOS DO CARROSSEL */   
+.carousel-text {
+    position: absolute; /* posicionamento absoluto */
+    bottom: 20px; /* distância do texto em relação ao fundo */
+    left: 0; /* alinhamento à esquerda */
+    width: 100%; /* ocupa toda a largura do item */
+    text-align: center; /* alinhamento do texto ao centro */
+    background-color: rgba(0, 0, 0, 0.5); /* cor de fundo do texto com transparência */
+    color: white; /* cor do texto */
+    padding: 10px 0; /* espaçamento interno do texto */
+	font-size: 30px; /* define o tamanho da fonte */
+    font-family: 'protest revolution', sans-serif; /* importação da fonte do google */
+}
+
+/* ESTILIZAÇÃO DOS BOTÕES DO CARROSSEL */
+.carousel-controls {
+    position: absolute; /* posicionamento absoluto */
+    top: 50%; /* alinhamento ao centro vertical */
+    transform: translatey(-50%); /* ajuste fino do alinhamento vertical */
+    width: 100%; /* ocupa toda a largura do container */
+    display: flex; /* exibe os botões lado a lado */
+    justify-content: space-between; /* distribui os botões igualmente */
+    z-index: 1; /* para sobrepor ao carrossel */
+}
+.carousel-controls button {
+    background-color: transparent; /* fundo transparente */
+    color: white; /* cor do texto */
+    border: none; /* sem borda */
+    padding: 10px; /* espaçamento interno */
+    cursor: pointer; /* altera o cursor para indicar que é clicável */
+}
+        
+#prevBtn {
+    left: 10px; /* posição do botão de controle esquerdo */
+}
+        
+#nextBtn {
+    right: 10px; /* posição do botão de controle direito */
+}
+
+
+
+
+/* ESTILIZAÇÃO DA BARRA DE NAVEGAÇÃO */
+.navbar {
+    background-color: #a36fa6; /* cor de fundo da barra de navegação */
+    color: #fff; /* define a cor do texto */
+    overflow: hidden; /* para esconder os itens que transbordarem */
+    position: relative; /* barra de navegação fixada no topo da página */
+    width: 100%; /* largura total */
+    z-index: 1000; /* z-index alto para garantir que fique acima de outros elementos */
+    display: flex; /* ativa o modelo flexbox */
+    padding: 35px 0; /* adiciona preenchimento vertical */
+    justify-content: center; /* centraliza os itens horizontalmente */
+    font-size: 40px; /* define o tamanho da fonte */
+    font-family: 'protest revolution', sans-serif; /* importação da fonte do google */
+    height: 150px; /* altura fixa da barra de navegação */
+}
+
+/* ESTILIZAÇÃO DOS LINKS NA BARRA DE NAVEGAÇÃO */
+.navbar a {
+    color: #f2f2f2; /* cor do texto */
+    text-align: center; /* alinhamento do texto */
+    padding: 14px 150px; /* espaçamento interno */
+    text-decoration: none; /* remove sublinhado */
+}
+
+/* ESTILIZAÇÃO DOS LINKS NA BARRA DE NAVEGAÇÃO AO PASSAR O MOUSE */
+.navbar a:hover {
+    background-color: #f6d0f7; /* cor de fundo ao passar o mouse */
+    color: black; /* cor do texto ao passar o mouse */
+}
+
+/* BARRA DE NAVEGAÇÃO */
+.navbar img {
+    height: 300px; /* altura automática */
+    width: 200px; /* largura automática */
+    max-height: 135px; /* altura máxima */
+    max-width: 100%; /* largura máxima */
+    margin-top: 5px; /* ajuste de margem superior para centralizar a imagem verticalmente na barra de navegação */
+}
+
+
+
+
+/* ANIMAÇÃO DO TEXT-BOX */
+@keyframes textBoxAnimation {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+/* ESTILO DO TEXT-BOX */
+.text-box {
+    background-color: rgba(0, 0, 0, 0.5); /* cor de fundo da caixa de texto com transparência */
+    color: white; /* cor do texto */
+    padding: 20px; /* espaçamento interno */
+    position: absolute; /* posicionamento absoluto */
+    top: 75%; /* coloca a caixa no centro vertical */
+    animation: textboxanimation 12s linear infinite; /* aplicando a animação */
+    left: 50%; /* coloca a caixa no centro horizontal */
+    transform: translate(-50%, 50%); /* corrige a posição para o centro vertical e horizontal */
+    max-width: 60%; /* largura máxima */
+    border-radius: 10px; /* borda arredondada */
+	font-family: "Crimson Text", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 23px;
+}
+
+
+
+
+/*ESTILIZAÇÃO DA FOTO DOS OCULOS NA PÁGINA */
+.image-above-gif img {
+    width: 100%; /* tamanho original da imagem */
+    height: 300px; /* altura automática */
+    width: 200px; /* largura automática */
+    max-width: 100%; /* largura máxima */
+    position: absolute; /* define a posição absoluta para que possa ser posicionada livremente */
+    top: 280px; /* posiciona a partir do topo */
+    right: 1250px; /* posiciona a partir da direita */
+}
+
+
+
+
+/*ESTILIZAÇÃO DO GIF DA PÁGINA*/
+.gif-container {
+    position: absolute; /* define a posição absoluta para que possa ser posicionada livremente */
+    right: 250px; /* posiciona a partir da direita */
+}
+
+
+
+
+/* ESTILO DO RODAPÉ */
+footer {
+    margin-top: 20px; /* define a margem superior */
+    background-color: #a36fa6; /* define a cor de fundo */
+    color: #fff; /* define a cor do texto */
+    text-align: center; /* centraliza o texto horizontalmente */
+    padding: 5px; /* adiciona preenchimento */
+    position: relative; /* define a posição relativa */
+    bottom: 0; /* define a posição em relação à parte inferior */
+    width: 100%; /* define a largura */
+}
